@@ -43,22 +43,18 @@ class CommandeController extends Controller
 
     public function show($id)
     {
-        // Récupérez les détails de la commande avec son contenu (les bières commandées)
         $commande = Commande::with('bieres')->find($id);
 
-        // Si la commande n'est pas trouvée, renvoyez une réponse 404
         if (!$commande) {
             return response()->json(['message' => 'Commande non trouvée'], 404);
         }
 
-        // Récupérez la quantité restante de chaque bière en stock
         $quantite_stock = [];
         foreach ($commande->bieres as $biere) {
             $stock = Stock::where('biere_id', $biere->id)->first();
             $quantite_stock[$biere->id] = $stock ? $stock->quantite_stock : 0;
         }
 
-        // Renvoyez les détails de la commande avec le statut valide et la quantité restante de chaque bière
         return response()->json([
             'id_commande' => $commande->id,
             'valide' => $commande->valide,
