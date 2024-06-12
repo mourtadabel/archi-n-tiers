@@ -41,7 +41,7 @@ class CommandeController extends Controller
         }
     }
 
-    public function show($id)
+    public function index($id)
     {
         $commande = Commande::with('bieres')->find($id);
 
