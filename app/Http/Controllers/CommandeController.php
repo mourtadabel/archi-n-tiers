@@ -61,11 +61,31 @@ class CommandeController extends Controller
                 'quantite_stock' => $quantite_stock
             ];
         }
-
-        return response()->json([
+        /*
+         return response()->json([
             'id_commande' => $commande->id,
             'valide' => $commande->valide,
             'contenu' => $contenu
-        ]);
+        ]); */
+
+        return [
+            'id_commande' => $commande->id,
+            'valide' => $commande->valide,
+            'contenu' => $contenu
+        ];
+    }
+
+    public function indexAll()
+    {
+        $commandes = Commande::where('valide', true)->with('bieres')->get();
+
+        $result = [];
+
+        foreach ($commandes as $commande) {
+            $commandeDetails = $this->index($commande->id);
+            $result[] = $commandeDetails;
+        }
+
+        return response()->json($result);
     }
 }
