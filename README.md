@@ -12,7 +12,9 @@ Mon API Stock bières permet d'aider les serveurs ou les patrons de bar à recev
 
 ## Modèle Conceptuel et Logique de Données (MCD et MLD)
 
-- **MCD et MLD**: 
+- **MCD et MLD**:
+  ![mcd mld](https://github.com/mourtadabel/archi-n-tiers/assets/146818987/f405c01b-88f7-4117-98d6-598e37c1f775)
+
 
 ## Gestion des Bières
 
@@ -31,6 +33,7 @@ Mon API Stock bières permet d'aider les serveurs ou les patrons de bar à recev
 - **Méthode**: GET
 - **Description**: Récupère la liste de toutes les bières disponibles.
 - **Paramètres**: Aucun
+![postman_get_bieres](https://github.com/mourtadabel/archi-n-tiers/assets/146818987/c7aba9a9-d751-4b6a-a5d4-292fb1a8dfb3)
 
 ### Mettre à Jour une Bière
 
@@ -67,6 +70,7 @@ Mon API Stock bières permet d'aider les serveurs ou les patrons de bar à recev
 - **Méthode**: GET
 - **Description**: Récupère la liste de tous les stocks de bières.
 - **Paramètres**: Aucun
+![postman_get_stock](https://github.com/mourtadabel/archi-n-tiers/assets/146818987/94dca687-3388-46f1-b519-dd0b5ee421ed)
 
 ### Mettre à Jour un Stock de Bière
 
@@ -94,6 +98,7 @@ Mon API Stock bières permet d'aider les serveurs ou les patrons de bar à recev
 - **Description**: Crée une nouvelle commande.
 - **Paramètres**:
   - `bieres` (array, obligatoire): Liste des bières et quantités commandées.
+![postman_post_commandes](https://github.com/mourtadabel/archi-n-tiers/assets/146818987/539df0ce-73f4-4415-b164-960d23849fb9)
 
 ### Récupérer une Commande par ID
 
@@ -102,6 +107,7 @@ Mon API Stock bières permet d'aider les serveurs ou les patrons de bar à recev
 - **Description**: Récupère les détails d'une commande spécifique par son ID.
 - **Paramètres**:
   - `id` (int, obligatoire): ID de la commande.
+![postman_get_commandes_id](https://github.com/mourtadabel/archi-n-tiers/assets/146818987/ce941375-6330-4c33-96c9-9951bd4cc7ac)
 
 ### Récupérer Toutes les Commandes Validées
 
@@ -109,3 +115,4 @@ Mon API Stock bières permet d'aider les serveurs ou les patrons de bar à recev
 - **Méthode**: GET
 - **Description**: Récupère la liste de toutes les commandes validées.
 - **Paramètres**: Aucun
+![postman_get_commandes](https://github.com/mourtadabel/archi-n-tiers/assets/146818987/a45ed630-d048-4295-af66-de87ccba7a11)
