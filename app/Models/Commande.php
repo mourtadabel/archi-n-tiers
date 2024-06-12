@@ -13,7 +13,7 @@ class Commande extends Model
 
     public function bieres()
     {
-        return $this->belongsToMany(Biere::class);
+        return $this->belongsToMany(Biere::class,'biere_commande', 'id_commande', 'id_biere');
 
     }
 }
