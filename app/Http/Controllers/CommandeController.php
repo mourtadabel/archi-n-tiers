@@ -27,6 +27,8 @@ class CommandeController extends Controller
                 $commande->bieres()->attach($item['biere_id'], ['quantite' => $item['quantite']]);
 
                 $biere->quantite_stock -= $item['quantite'];
+                $commande->valide = true;
+                $commande->save();
                 $biere->save();
             }
 

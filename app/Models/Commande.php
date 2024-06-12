@@ -16,4 +16,9 @@ class Commande extends Model
         return $this->belongsToMany(Biere::class,'biere_commande')->withPivot('quantite');
 
     }
+
+    public function getValideAttribute($value)
+    {
+        return (bool) $value;
+    }
 }
