@@ -117,3 +117,6 @@ Mon API Stock bières permet d'aider les serveurs ou les patrons de bar à recev
 - **Description**: Récupère la liste de toutes les commandes validées.
 - **Paramètres**: Aucun
 ![postman_get_commandes](https://github.com/mourtadabel/archi-n-tiers/assets/146818987/a45ed630-d048-4295-af66-de87ccba7a11)
+
+### Format de réponse
+L'API renvoie des données au format JSON.
