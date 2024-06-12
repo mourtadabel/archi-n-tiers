@@ -1,4 +1,4 @@
-# Documentation de l'API de Gestion des Commandes de Bières
+# Documentation de l'API de Gestion de Stock bières
 
 ## Introduction
 
