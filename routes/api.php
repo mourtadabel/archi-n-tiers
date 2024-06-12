@@ -25,4 +25,4 @@ Route::delete('stock/{stock}', [StockController::class, 'destroy']);
 
 
 Route::post('commandes', [CommandeController::class, 'upload']);
-Route::get('commandes/{id}', [CommandeController::class, 'show']);
+Route::get('commandes/{id}', [CommandeController::class, 'index']);

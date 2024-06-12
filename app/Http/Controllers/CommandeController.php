@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Commande;
@@ -33,7 +32,7 @@ class CommandeController extends Controller
 
             DB::commit();
 
-            return response()->json(['message' => 'Commande créée avec succès'], 201);
+            return response()->json(['message' => 'Commande créée avec succès', 'commande' => $commande], 201);
         } catch (\Exception $e) {
             DB::rollBack();
 
@@ -41,7 +40,7 @@ class CommandeController extends Controller
         }
     }
 
-    public function show($id)
+    public function index($id)
     {
         $commande = Commande::with('bieres')->find($id);
 
@@ -49,17 +48,22 @@ class CommandeController extends Controller
             return response()->json(['message' => 'Commande non trouvée'], 404);
         }
 
-        $quantite_stock = [];
+        $contenu = [];
         foreach ($commande->bieres as $biere) {
             $stock = Stock::where('biere_id', $biere->id)->first();
-            $quantite_stock[$biere->id] = $stock ? $stock->quantite_stock : 0;
+            $quantite_stock = $stock ? $stock->quantite_stock : 0;
+
+            $contenu[] = [
+                'nom_biere' => $biere->nom,
+                'quantite_commandee' => $biere->pivot->quantite,
+                'quantite_stock' => $quantite_stock
+            ];
         }
 
         return response()->json([
             'id_commande' => $commande->id,
             'valide' => $commande->valide,
-            'contenu' => $commande->bieres,
-            'quantite_stock' => $quantite_stock
+            'contenu' => $contenu
         ]);
     }
 }
