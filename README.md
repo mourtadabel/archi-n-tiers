@@ -14,6 +14,7 @@ Mon API Stock bières permet d'aider les serveurs ou les patrons de bar à recev
 
 - **MCD et MLD**:
   ![mcd mld](https://github.com/mourtadabel/archi-n-tiers/assets/146818987/f405c01b-88f7-4117-98d6-598e37c1f775)
+![mysql_workbench](https://github.com/mourtadabel/archi-n-tiers/assets/146818987/4a26d868-83ac-421c-94ff-3584615e0ed2)
 
 
 ## Gestion des Bières
