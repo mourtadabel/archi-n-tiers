@@ -4,6 +4,10 @@
 
 Mon API Stock bières permet d'aider les serveurs ou les patrons de bar à recevoir les commandes et à gérer leur stock tout en vérifiant les quantités disponibles. Le stock change en fonction des commandes validées.
 
+### Architecture
+![architecture](https://github.com/mourtadabel/archi-n-tiers/assets/146818987/e30cfd6b-9dd8-4f10-88bf-d954b894cc09)
+
+
 ### Technologies Utilisées
 
 - **Framework**: [Laravel](https://laravel.com/)
@@ -12,8 +16,9 @@ Mon API Stock bières permet d'aider les serveurs ou les patrons de bar à recev
 
 ## Modèle Conceptuel et Logique de Données (MCD et MLD)
 
-- **MCD et MLD**:
   ![mcd mld](https://github.com/mourtadabel/archi-n-tiers/assets/146818987/f405c01b-88f7-4117-98d6-598e37c1f775)
+
+### Mysql Workbench
 ![mysql_workbench](https://github.com/mourtadabel/archi-n-tiers/assets/146818987/4a26d868-83ac-421c-94ff-3584615e0ed2)
 
 
