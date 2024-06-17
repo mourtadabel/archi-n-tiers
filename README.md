@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Mon API Stock bières permet d'aider les serveurs ou les patrons de bar à recevoir les commandes et à gérer leur stock tout en vérifiant les quantités disponibles. Le stock change en fonction des commandes validées.
+L'API Stock bières permet d'aider les serveurs ou les patrons de bar à recevoir les commandes et à gérer leur stock tout en vérifiant les quantités disponibles. Le stock change en fonction des commandes validées.
 
 ### Architecture
 ![architecture](https://github.com/mourtadabel/archi-n-tiers/assets/146818987/e30cfd6b-9dd8-4f10-88bf-d954b894cc09)
